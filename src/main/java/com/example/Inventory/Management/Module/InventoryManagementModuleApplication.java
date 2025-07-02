@@ -10,4 +10,6 @@ public class InventoryManagementModuleApplication {
 		SpringApplication.run(InventoryManagementModuleApplication.class, args);
 	}
 
+
+
 }
