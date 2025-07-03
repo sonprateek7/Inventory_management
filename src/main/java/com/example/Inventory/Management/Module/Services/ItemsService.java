@@ -3,10 +3,12 @@ package com.example.Inventory.Management.Module.Services;
 import com.example.Inventory.Management.Module.Models.ItemsModel;
 import com.example.Inventory.Management.Module.Repositories.ItemRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ItemsService {
 
     @Autowired
