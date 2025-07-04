@@ -17,10 +17,14 @@ import java.time.LocalDateTime;
 public class InventoryModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @ManyToOne
+//    @JoinColumn(name = "item_id")
     private int item_id;
     private int item_stock;
     private int  item_available;
-    private LocalDateTime updatedAt = LocalDateTime.now();
+    //private LocalDateTime updatedAt = LocalDateTime.now();
+
+
+    //private ItemsModel item;
 
 }

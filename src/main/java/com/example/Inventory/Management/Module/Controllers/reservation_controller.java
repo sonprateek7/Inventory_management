@@ -40,16 +40,16 @@ public class reservation_controller {
        return "Item quantity not sufficient";
     }
 
-    @PutMapping("reservations/{reservation_id}")
-    public ResponseEntity<Objects> updateReservation(@PathVariable int reservation_id, @RequestBody ItemReservationModel itemReservationModel){
-       int response= reservationService.updateReservation(itemReservationModel,reservation_id);
-       if(response==0)
-          return ResponseEntity.ok().build();
-       else if(response==-1)
-         return   ResponseEntity.notFound().build();
-       return ResponseEntity.badRequest().build();
-
-    }
+//    @PutMapping("reservations/{reservation_id}")
+//    public ResponseEntity<Objects> updateReservation(@PathVariable int reservation_id, @RequestBody ItemReservationModel itemReservationModel){
+//       int response= reservationService.updateReservation(itemReservationModel,reservation_id);
+//       if(response==0)
+//          return ResponseEntity.ok().build();
+//       else if(response==-1)
+//         return   ResponseEntity.notFound().build();
+//       return ResponseEntity.badRequest().build();
+//
+//    }
 
     @DeleteMapping("reservations/{reservation_id}")
     public ResponseEntity<String> deleteReservation(@PathVariable int reservation_id){

@@ -31,7 +31,7 @@ public class Supply_controller {
     }
 
     @PostMapping("item/supply")
-    public boolean addSupply(@RequestBody InventoryModel supply){
+    public synchronized boolean addSupply(@RequestBody InventoryModel supply){
         return inventoryService.addSupply(supply);
     }
 

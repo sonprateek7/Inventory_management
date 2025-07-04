@@ -30,10 +30,14 @@ public class InventoryService {
         return inventoryRepo.findAll();
     }
 
-    public boolean addSupply(InventoryModel inventoryModel){
+    public synchronized boolean addSupply(InventoryModel inventoryModel){
         if(!itemRepo.existsById(inventoryModel.getItem_id()))
             return false;
-        inventoryRepo.save(inventoryModel);
+        try {
+            inventoryRepo.save(inventoryModel);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return true;
     }
 
